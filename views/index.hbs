@@ -1,0 +1,48 @@
+<div class="container col-md-5">
+  <form action="/url" method="POST">
+    <div class="mb-3">
+      <h4>Music URL</h4>
+      <input type="text" name="url" class="form-control" id="inputUrl" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+
+      <button type="submit" id="urlBtn" class="btn btn-success" style="width: 100%;">Отправить</button>
+    </div>
+  </form>
+</div>
+
+<div class="container col-md-5">
+  <form enctype="multipart/form-data" action="/upload" method="POST">
+    <div class="mb-3">
+      <input type="hidden" name="MAX_FILE_SIZE" class="form-control" value="100000" />
+      <input name="uploadedfile" class="form-control" type="file" /><br />
+      <input type="submit" class="form-control" value="Загрузить" />
+    </div>
+  </form>
+</div>
+
+
+<div class="wrapper">
+
+  <header>
+    <h1>Web dictaphone</h1>
+  </header>
+
+  <section class="main-controls">
+    <canvas class="visualizer" height="60px"></canvas>
+    <div>
+      <input type="checkbox" name="value" id="checkbox">Определение песни по напеванию
+    </div>
+    <div id="buttons">
+      <button class="record">Record</button>
+      <button class="stop">Stop</button>
+    </div>
+  </section>
+
+  <section class="sound-clips">
+
+    <div id="resultHum">
+      
+    </div>
+  </section>
+
+</div>
